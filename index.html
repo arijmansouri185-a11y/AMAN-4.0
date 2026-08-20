@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>AMAN 4.0 | Digital Safety</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav>
+
+    <div class="logo">
+      🛡️ AMAN
+    </div>
+
+    <div class="nav-actions">
+
+      <button
+        class="nav-btn"
+        onclick="showPage('home')"
+      >
+        Home
+      </button>
+
+      <button
+        class="nav-btn"
+        onclick="toggleDarkMode()"
+      >
+        🌙
+      </button>
+
+      <button
+        id="loginButton"
+        class="nav-btn"
+        onclick="showPage('login')"
+      >
+        Login
+      </button>
+
+      <button
+        id="dashboardButton"
+        class="nav-btn hidden"
+        onclick="showPage('dashboard')"
+      >
+        Dashboard
+      </button>
+
+    </div>
+
+  </nav>
+
+
+  <!-- ================= HOME ================= -->
+
+  <section
+    id="home"
+    class="page active"
+  >
+
+    <div class="hero">
+
+      <div class="shield">
+        🛡️
+      </div>
+
+      <h1>
+        AMAN
+      </h1>
+
+      <h2>
+        أمانك الرقمي يبدأ بقرارك.
+      </h2>
+
+      <p>
+        منصة تفاعلية تساعدك على فهم مخاطر العالم الرقمي،
+        اختبار مهاراتك، وبناء عادات رقمية أكثر أمانًا.
+      </p>
+
+      <div class="hero-buttons">
+
+        <button
+          class="primary"
+          onclick="showPage('register')"
+        >
+          🚀 ابدئي رحلتك
+        </button>
+
+        <button
+          class="secondary"
+          onclick="showPage('challenges')"
+        >
+          🎯 التحديات
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <main>
+
+      <div class="title">
+
+        <h2>
+          ✨ ماذا تقدم AMAN؟
+        </h2>
+
+        <p>
+          تعلّمي • اختبري • تطوّري
+        </p>
+
+      </div>
+
+
+      <div class="features">
+
+        <div class="feature">
+
+          <div class="icon">
+            🔍
+          </div>
+
+          <h3>
+            Safety Check
+          </h3>
+
+          <p>
+            اختبري وعيك بالمخاطر الرقمية.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="icon">
+            🎯
+          </div>
+
+          <h3>
+            Cyber Challenges
+          </h3>
+
+          <p>
+            تحديات متنوعة من مواقف رقمية.
+          </p>
+
+        </div>
+
+
+        <div class="feature">
+
+          <div class="icon">
+            🏆
+          </div>
+
+          <h3>
+            XP & Badges
+          </h3>
+
+          <p>
+            اجمعي XP واحصلي على Badges.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="title"
+        style="margin-top:65px"
+      >
+
+        <h2>
+          كيف تعمل AMAN؟
+        </h2>
+
+      </div>
+
+
+      <div class="steps">
+
+        <div class="step">
+
+          <div class="number">
+            1
+          </div>
+
+          <h3>
+            أنشئي حساب
+          </h3>
+
+          <p>
+            اعملي مساحة شخصية.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="number">
+            2
+          </div>
+
+          <h3>
+            حلّي التحديات
+          </h3>
+
+          <p>
+            اختبري مهاراتك.
+          </p>
+
+        </div>
+
+
+        <div class="step">
+
+          <div class="number">
+            3
+          </div>
+
+          <h3>
+            طوّري مستواك
+          </h3>
+
+          <p>
+            اجمعي XP وBadges.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- SAFETY CHECK -->
+
+      <div
+        class="card"
+        style="margin-top:50px;text-align:center"
+      >
+
+        <div style="font-size:45px">
+          🔍
+        </div>
+
+        <h2>
+          Safety Check
+        </h2>
+
+        <p>
+          اختبري مستوى وعيك الرقمي في دقائق.
+        </p>
+
+        <button
+          class="action pink"
+          onclick="showPage('safety')"
+        >
+          🚀 ابدئي الاختبار
+        </button>
+
+      </div>
+
+    </main>
+
+  </section>
+
+
+  <!-- ================= REGISTER ================= -->
+
+  <section
+    id="register"
+    class="page screen"
+  >
+
+    <button
+      class="back"
+      onclick="showPage('home')"
+    >
+      ← الرجوع
+    </button>
+
+    <div class="card auth">
+
+      <div style="font-size:55px">
+        👤
+      </div>
+
+      <h2>
+        إنشاء حساب
+      </h2>
+
+      <p>
+        ابدئي رحلتك مع AMAN.
+      </p>
+
+      <input
+        id="registerName"
+        placeholder="اسمك"
+      >
+
+      <input
+        id="registerEmail"
+        type="email"
+        placeholder="البريد الإلكتروني"
+      >
+
+      <input
+        id="registerPassword"
+        type="password"
+        placeholder="كلمة السر"
+      >
+
+      <div
+        id="registerError"
+        class="error"
+      ></div>
+
+      <button
+        class="auth-button"
+        onclick="register()"
+      >
+        ✨ إنشاء الحساب
+      </button>
+
+      <p
+        class="switch"
+        onclick="showPage('login')"
+      >
+        عندي حساب بالفعل → Login
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= LOGIN ================= -->
+
+  <section
+    id="login"
+    class="page screen"
+  >
+
+    <button
+      class="back"
+      onclick="showPage('home')"
+    >
+      ← الرجوع
+    </button>
+
+    <div class="card auth">
+
+      <div style="font-size:55px">
+        🔐
+      </div>
+
+      <h2>
+        تسجيل الدخول
+      </h2>
+
+      <input
+        id="loginEmail"
+        type="email"
+        placeholder="البريد الإلكتروني"
+      >
+
+      <input
+        id="loginPassword"
+        type="password"
+        placeholder="كلمة السر"
+      >
+
+      <div
+        id="loginError"
+        class="error"
+      ></div>
+
+      <button
+        class="auth-button"
+        onclick="login()"
+      >
+        🔓 دخول
+      </button>
+
+      <p
+        class="switch"
+        onclick="showPage('register')"
+      >
+        ما عنديش حساب → إنشاء حساب
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= DASHBOARD ================= -->
+
+  <section
+    id="dashboard"
+    class="page screen"
+  >
+
+    <div class="title">
+
+      <div style="font-size:50px">
+        📊
+      </div>
+
+      <h2>
+        My AMAN Dashboard
+      </h2>
+
+      <p id="welcomeMessage"></p>
+
+    </div>
+
+
+    <div class="stats">
+
+      <div class="stat">
+
+        <div>
+          ⭐
+        </div>
+
+        <div
+          id="xpValue"
+          class="stat-number"
+        >
+          0
+        </div>
+
+        <p>
+          XP
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <div>
+          🆙
+        </div>
+
+        <div
+          id="levelValue"
+          class="stat-number"
+        >
+          1
+        </div>
+
+        <p>
+          Level
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <div>
+          🎯
+        </div>
+
+        <div
+          id="challengeValue"
+          class="stat-number"
+        >
+          0
+        </div>
+
+        <p>
+          Challenges
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <div>
+          🏆
+        </div>
+
+        <div
+          id="badgeValue"
+          class="stat-number"
+        >
+          0
+        </div>
+
+        <p>
+          Badges
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="card"
+      style="margin-top:20px"
+    >
+
+      <h3>
+        📈 Progress
+      </h3>
+
+      <p id="progressText">
+        0 XP
+      </p>
+
+      <div class="progress">
+
+        <div
+          id="progressBar"
+          class="progress-bar"
+        ></div>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="card"
+      style="margin-top:20px"
+    >
+
+      <h2>
+        🏆 Badges
+      </h2>
+
+      <div
+        id="badgesContainer"
+        class="badges"
+      ></div>
+
+    </div>
+
+
+    <div
+      class="card"
+      style="margin-top:20px"
+    >
+
+      <h2>
+        📚 Learn Hub
+      </h2>
+
+      <div class="learn">
+
+        <div>
+
+          <h3>
+            🎣 Phishing
+          </h3>
+
+          <p>
+            تعلّمي كيف تكتشفي الروابط والرسائل المشبوهة.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            🔐 Password Security
+          </h3>
+
+          <p>
+            تعلّمي أهمية كلمات السر القوية والمختلفة.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            🔒 Privacy
+          </h3>
+
+          <p>
+            احمي معلوماتك الشخصية على الإنترنت.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <button
+      class="action pink"
+      onclick="showPage('challenges')"
+    >
+      🎯 Cyber Challenges
+    </button>
+
+    <button
+      class="action yellow"
+      onclick="logout()"
+    >
+      🚪 Logout
+    </button>
+
+  </section>
+
+
+  <!-- ================= CHALLENGES ================= -->
+
+  <section
+    id="challenges"
+    class="page screen"
+  >
+
+    <button
+      class="back"
+      onclick="showPage('dashboard')"
+    >
+      ← Dashboard
+    </button>
+
+    <div class="title">
+
+      <div style="font-size:50px">
+        🎯
+      </div>
+
+      <h2>
+        Cyber Challenges
+      </h2>
+
+      <p>
+        اختاري تحديًا وابدئي.
+      </p>
+
+    </div>
+
+
+    <div
+      id="challengeContainer"
+      class="challenges"
+    ></div>
+
+  </section>
+
+
+  <!-- ================= QUIZ ================= -->
+
+  <section
+    id="quiz"
+    class="page screen"
+  >
+
+    <button
+      class="back"
+      onclick="showPage('challenges')"
+    >
+      ← التحديات
+    </button>
+
+    <div class="card">
+
+      <div class="title">
+
+        <div style="font-size:50px">
+          🧠
+        </div>
+
+        <h2 id="quizCategory">
+          Challenge
+        </h2>
+
+        <p id="quizXP">
+          +100 XP
+        </p>
+
+      </div>
+
+
+      <div
+        style="
+        display:flex;
+        justify-content:space-between;
+        "
+      >
+
+        <span id="quizNumber">
+          السؤال 1 من 1
+        </span>
+
+        <span>
+          100%
+        </span>
+
+      </div>
+
+
+      <div class="progress">
+
+        <div
+          id="quizProgress"
+          class="progress-bar"
+        ></div>
+
+      </div>
+
+
+      <div
+        id="quizQuestion"
+        class="question"
+      ></div>
+
+
+      <div
+        id="quizAnswers"
+        class="answers"
+      ></div>
+
+
+      <div
+        id="quizFeedback"
+        class="feedback hidden"
+      ></div>
+
+
+      <button
+        id="nextQuizButton"
+        class="next hidden"
+        onclick="finishQuiz()"
+      >
+        إنهاء التحدي →
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= SAFETY CHECK ================= -->
+
+  <section
+    id="safety"
+    class="page screen"
+  >
+
+    <button
+      class="back"
+      onclick="showPage('home')"
+    >
+      ← الرجوع
+    </button>
+
+    <div class="card">
+
+      <div class="title">
+
+        <div style="font-size:50px">
+          🔍
+        </div>
+
+        <h2>
+          Safety Check
+        </h2>
+
+        <p>
+          اكتشفي مستوى وعيك الرقمي.
+        </p>
+
+      </div>
+
+
+      <div
+        id="safetyQuestionNumber"
+        style="font-weight:bold"
+      ></div>
+
+
+      <div class="progress">
+
+        <div
+          id="safetyProgress"
+          class="progress-bar"
+        ></div>
+
+      </div>
+
+
+      <div
+        id="safetyQuestion"
+        class="question"
+      ></div>
+
+
+      <div
+        id="safetyAnswers"
+        class="answers"
+      ></div>
+
+
+      <div
+        id="safetyResult"
+        class="feedback hidden"
+      ></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <strong>
+      🛡️ AMAN 4.0
+    </strong>
+
+    <p>
+      أمانك الرقمي يبدأ بقرارك.
+    </p>
+
+    <p>
+      Learn • Think • Defend
+    </p>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
