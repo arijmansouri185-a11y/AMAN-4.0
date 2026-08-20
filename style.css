@@ -1,0 +1,485 @@
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial,Tahoma,sans-serif;
+  background:#fff8fc;
+  color:#4b2868;
+}
+
+body.dark{
+  background:#17121d;
+  color:#f8edf8;
+}
+
+button,input{
+  font-family:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+/* NAVBAR */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 5%;
+  background:white;
+  border-bottom:1px solid #f0dce8;
+}
+
+body.dark nav{
+  background:#211a29;
+  border-color:#3b2d45;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:bold;
+  color:#e05296;
+}
+
+.nav-actions{
+  display:flex;
+  gap:8px;
+}
+
+.nav-btn{
+  border:0;
+  padding:10px 14px;
+  border-radius:11px;
+  background:#ffd84d;
+  color:#4b2868;
+  font-weight:bold;
+}
+
+/* HOME */
+
+.hero{
+  background:linear-gradient(135deg,#f47bb5,#df5d9c);
+  color:white;
+  text-align:center;
+  padding:70px 20px 85px;
+}
+
+.shield{
+  font-size:65px;
+}
+
+.hero h1{
+  font-size:52px;
+  margin:5px 0;
+}
+
+.hero h2{
+  color:white;
+  margin:8px 0 18px;
+}
+
+.hero p{
+  max-width:650px;
+  margin:auto;
+  line-height:1.8;
+  font-size:18px;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+
+.primary,
+.secondary{
+  border:0;
+  padding:15px 25px;
+  border-radius:15px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.primary{
+  background:#ffd84d;
+  color:#4b2868;
+}
+
+.secondary{
+  background:white;
+  color:#e05296;
+}
+
+/* MAIN */
+
+main{
+  max-width:1000px;
+  margin:auto;
+  padding:55px 20px;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.title h2{
+  font-size:30px;
+}
+
+.features,
+.steps,
+.challenges,
+.stats,
+.learn{
+  display:grid;
+  gap:18px;
+}
+
+.features,
+.steps{
+  grid-template-columns:repeat(3,1fr);
+}
+
+.feature,
+.step,
+.card,
+.challenge,
+.stat{
+  background:white;
+  border-radius:20px;
+  padding:24px;
+  box-shadow:0 7px 22px rgba(75,40,104,.08);
+}
+
+body.dark .feature,
+body.dark .step,
+body.dark .card,
+body.dark .challenge,
+body.dark .stat{
+  background:#241c2c;
+}
+
+.feature{
+  text-align:center;
+}
+
+.icon{
+  font-size:40px;
+}
+
+.step{
+  text-align:center;
+}
+
+.number{
+  width:45px;
+  height:45px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#f47bb5;
+  color:white;
+  font-weight:bold;
+}
+
+/* SCREENS */
+
+.screen{
+  display:none;
+  max-width:900px;
+  margin:40px auto;
+  padding:20px;
+}
+
+.back{
+  border:0;
+  background:transparent;
+  color:#e05296;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
+/* AUTH */
+
+.auth{
+  max-width:470px;
+  margin:auto;
+  text-align:center;
+}
+
+.auth input{
+  width:100%;
+  padding:14px;
+  margin:7px 0;
+  border:2px solid #efd9e7;
+  border-radius:12px;
+  outline:none;
+}
+
+body.dark .auth input{
+  background:#17121d;
+  color:white;
+  border-color:#4a3854;
+}
+
+.auth-button{
+  width:100%;
+  padding:14px;
+  margin-top:10px;
+  border:0;
+  border-radius:13px;
+  background:#f47bb5;
+  color:white;
+  font-weight:bold;
+}
+
+.switch{
+  color:#e05296;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.error{
+  color:#d93672;
+  min-height:23px;
+}
+
+/* DASHBOARD */
+
+.stats{
+  grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+  text-align:center;
+}
+
+.stat-number{
+  font-size:32px;
+  color:#e05296;
+  font-weight:bold;
+  margin:8px 0;
+}
+
+.progress{
+  height:13px;
+  background:#efdce8;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.progress-bar{
+  height:100%;
+  width:0;
+  background:linear-gradient(90deg,#f47bb5,#ffd84d);
+}
+
+/* CHALLENGES */
+
+.challenges{
+  grid-template-columns:repeat(2,1fr);
+}
+
+.challenge-tag{
+  display:inline-block;
+  padding:5px 9px;
+  background:#fff1a8;
+  border-radius:8px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.challenge-footer{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:18px;
+}
+
+.challenge-button{
+  border:0;
+  padding:11px 16px;
+  border-radius:11px;
+  background:#f47bb5;
+  color:white;
+  font-weight:bold;
+}
+
+/* QUIZ */
+
+.question{
+  background:#fff0f7;
+  padding:22px;
+  border-radius:18px;
+  font-size:18px;
+  line-height:1.8;
+  margin:20px 0;
+}
+
+body.dark .question{
+  background:#302438;
+}
+
+.answers{
+  display:grid;
+  gap:11px;
+}
+
+.answer{
+  width:100%;
+  padding:15px;
+  background:white;
+  color:#4b2868;
+  border:2px solid #efd9e7;
+  border-radius:13px;
+  text-align:right;
+  font-size:16px;
+}
+
+body.dark .answer{
+  background:#241c2c;
+  color:white;
+  border-color:#493851;
+}
+
+.feedback{
+  display:none;
+  margin-top:18px;
+  padding:16px;
+  background:#fff1a8;
+  border-radius:15px;
+  line-height:1.7;
+}
+
+.next{
+  display:none;
+  margin:18px auto 0;
+  border:0;
+  padding:13px 22px;
+  border-radius:12px;
+  background:#4b2868;
+  color:white;
+  font-weight:bold;
+}
+
+/* RESULT */
+
+.result{
+  text-align:center;
+}
+
+.score{
+  font-size:60px;
+  color:#e05296;
+  font-weight:bold;
+}
+
+.action{
+  border:0;
+  padding:13px 20px;
+  margin:7px;
+  border-radius:12px;
+  font-weight:bold;
+}
+
+.pink{
+  background:#f47bb5;
+  color:white;
+}
+
+.yellow{
+  background:#ffd84d;
+  color:#4b2868;
+}
+
+/* BADGES */
+
+.badges{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+}
+
+.badge{
+  text-align:center;
+  padding:16px 7px;
+  background:#fff0f7;
+  border-radius:15px;
+}
+
+body.dark .badge{
+  background:#302438;
+}
+
+.locked{
+  opacity:.3;
+  filter:grayscale(1);
+}
+
+/* FOOTER */
+
+footer{
+  margin-top:40px;
+  padding:30px;
+  text-align:center;
+  background:#4b2868;
+  color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+  .features,
+  .steps,
+  .stats{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .badges{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+}
+
+@media(max-width:550px){
+
+  nav{
+    padding:12px 4%;
+  }
+
+  .nav-actions .nav-btn:first-child{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
+
+  .hero h2{
+    font-size:21px;
+  }
+
+  .features,
+  .steps,
+  .stats,
+  .challenges{
+    grid-template-columns:1fr;
+  }
+
+  .badges{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
